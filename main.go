@@ -22,6 +22,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", RootHandler)
 	mux.HandleFunc("/user/", userHandler)
+	mux.HandleFunc("/users/", usersHandler)
 	fmt.Println("Server is Running on :8080")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
